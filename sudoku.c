@@ -97,7 +97,7 @@ List* get_adj_nodes(Node* n)
           Node *nodo = createNode();
           nodo = copy(n);
 
-          printf("%i ",is_valid(nodo));
+
           for(int k=0;k<9;k++)
             {for(int m = 0; m < 9; m++)
               {
@@ -113,7 +113,7 @@ List* get_adj_nodes(Node* n)
               }
               break;
             }
-          printf("f%i ",is_valid(nodo));
+
           if(nodo != NULL && is_valid(nodo) == 1)
             pushBack(list, nodo);
           cont++;

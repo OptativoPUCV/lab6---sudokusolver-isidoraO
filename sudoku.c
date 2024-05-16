@@ -49,7 +49,7 @@ void inicializar_array(int *array)
 }
 
 int is_valid(Node* n){
-  int aux_array_fila[10], aux_array_col[10], aux_array_submatriz[10];
+  int aux_array_fila[10], aux_array_col[10], aux_array_submatriz[10], k;
 
   for(int j = 0; j < 9; j++)
   {
@@ -71,7 +71,7 @@ int is_valid(Node* n){
         else if(aux_array_col[n->sudo[j][i]] == 1)
             return 0;
       }
-      for(int k = 0; k < 9; k++)
+      for(k = 0; k < 9; k++)
         {
           int l = 3 * (j / 3) + (k % 3);
           int p = 3 * (j / 3) + (k % 3);

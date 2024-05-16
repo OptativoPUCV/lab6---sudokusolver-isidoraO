@@ -44,7 +44,7 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-  int aux_array_fila[10],aux_array_col[10], aux_array_submatrix[10], p;
+  int aux_array_fila[10],aux_array_col[10], /*aux_array_submatrix[10], */p;
 
   for(int j = 0; j < 9; j++)
   {
@@ -52,7 +52,7 @@ int is_valid(Node* n){
       {
         aux_array_fila[i] = 0;
         aux_array_col[i] = 0;
-        aux_array_submatrix[i] = 0;
+        //aux_array_submatrix[i] = 0;
       }
     
     for(int i = 0; i < 9; i++)

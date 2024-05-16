@@ -57,8 +57,10 @@ List* get_adj_nodes(Node* n){
     for(int j=0;j<9;j++)
       {
         if(n->sudo[i][j] == 0)
+        {
           nodo->sudo[i][j] = cont;
           pushBack(list, nodo);
+        }
         else
           nodo->sudo[i][j] = n->sudo[i][j];
       }

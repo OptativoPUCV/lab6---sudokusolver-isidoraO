@@ -48,12 +48,16 @@ int is_valid(Node* n){
   for(int i = 0; i < 10 ; i++)
       aux_array[i] = 0;
   for(int i = 0; i < 9; i++)
-    {
-      if((n->sudo[i][0] != 0) && aux_array[n->sudo[i][0]] == 0)
+      if((n->sudo[i][0] != 0) && (aux_array[n->sudo[i][0]] == 0))
           aux_array[n->sudo[i][0]] = 1;
       else if(aux_array[n->sudo[i][0]] == 1)
           return 0;
-    }
+    
+  for(int i = 0; i < 9; i++)
+    if((n->sudo[0][i] != 0) && (aux_array[n->sudo[0][1]] == 0))
+      aux_array[n->sudo[0][i]] = 1;
+    else if(aux_array[n->sudo[0][i]] == 1)
+      return 0;
   return 1;
 }
 

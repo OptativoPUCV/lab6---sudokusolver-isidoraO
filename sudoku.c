@@ -96,7 +96,6 @@ List* get_adj_nodes(Node* n)
         {
           Node *nodo = createNode();
           nodo = copy(n);
-          nodo->sudo[i][j] = cont;
           
           for(int k=0;k<9;k++)
             for(int m = 0; m < 9; m++)
@@ -113,13 +112,11 @@ List* get_adj_nodes(Node* n)
           if(nodo != NULL)
             pushBack(list, nodo);
           cont++;
-
           break;
         }
       }
   return list;
 }
-
 
 int is_final(Node* n){
   for(int i = 0; i < 9; i++)
@@ -132,8 +129,6 @@ int is_final(Node* n){
 Node* DFS(Node* initial, int* cont){
   return NULL;
 }
-
-
 
 /*
 int main( int argc, char *argv[] ){

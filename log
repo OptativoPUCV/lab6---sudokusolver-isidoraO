@@ -1328,3 +1328,17 @@ Thu 16 May 2024 05:55:26 AM UTC:
  tests:  5|3
 total_score: 35/70
 065b618
+Thu 16 May 2024 05:56:37 AM UTC: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:101:11: error: this ‘for’ clause does not guard... [-Werror=misleading-indentation]
+  101 |           for(int k=0;k<9;k++)
+      |           ^~~
+sudoku.c:112:13: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  112 |             printf("l%i ",is_valid(nodo));
+      |             ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+99eff2d

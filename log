@@ -489,3 +489,17 @@ Thu 16 May 2024 03:36:42 AM UTC:
  tests:  4|4
 total_score: 25/70
 b8d4ab5
+Thu 16 May 2024 03:36:51 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:74:29: error: array subscript 9 is above array bounds of ‘int[9][9]’ [-Werror=array-bounds]
+   74 |         printf("%d ",n->sudo[i][j]);
+      |                      ~~~~~~~^~~
+sudoku.c:7:8: note: while referencing ‘sudo’
+    7 |    int sudo[9][9];
+      |        ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8c59c4d

@@ -1215,3 +1215,17 @@ sudoku.c:52:46: error: variable ‘aux_array_submatriz’ set but not used [-Wer
 cc1: all warnings being treated as errors
 Compilation failed
 a4b7c8a
+Thu 16 May 2024 04:48:10 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:52:76: error: expected identifier or ‘(’ before ‘;’ token
+   52 |   int aux_array_fila[10], aux_array_col[10], /*aux_array_submatriz[10], k*/;
+      |                                                                            ^
+sudoku.c:60:9: error: ‘aux_array_submatriz’ undeclared (first use in this function)
+   60 |         aux_array_submatriz[i] = 0;
+      |         ^~~~~~~~~~~~~~~~~~~
+sudoku.c:60:9: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+7f7042d

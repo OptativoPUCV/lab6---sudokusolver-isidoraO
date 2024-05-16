@@ -64,12 +64,13 @@ List* get_adj_nodes(Node* n){
               {
                 nodo->sudo[k][m] = n->sudo[k][m];
                 if(nodo->sudo[k][m] == 0)
-                    nodo->sudo[k][m] = cont;
-
+                {
+                  nodo->sudo[k][m] = cont;
+                  pushBack(list, nodo);
+                }
                 if(cont == 9)  cont = 0;
               }
           cont++;
-          pushBack(list, nodo);
         }
       }
 

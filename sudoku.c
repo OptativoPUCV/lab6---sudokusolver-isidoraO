@@ -75,7 +75,7 @@ int is_valid(Node* n){
         }
       } 
   }
-  int k=6; 
+  int k=2; 
   for(p=0;p<9;p++){
       int i=3*(k/3) + (p/3) ;
       int j=3*(k%3) + (p%3) ;

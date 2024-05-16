@@ -918,3 +918,54 @@ Thu 16 May 2024 04:15:13 AM UTC:
  tests:  4|4
 total_score: 25/70
 07c9ae7
+Thu 16 May 2024 04:18:17 AM UTC: 
+ sudoku.c | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:78:72: error: expected ‘]’ before ‘)’ token
+   78 |           if((n->sudo[l][p] != 0) && (aux_array_fila[n->sudo[l][p] == 0))
+      |                                                                        ^
+      |                                                                        ]
+sudoku.c:79:44: error: expected ‘]’ before ‘;’ token
+   79 |             aux_array_col[n->sudo[l][p] = 1;
+      |                                            ^
+      |                                            ]
+sudoku.c:79:26: error: value computed is not used [-Werror=unused-value]
+   79 |             aux_array_col[n->sudo[l][p] = 1;
+      |             ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+   80 |           else if(aux_array_col[n->sudo[l][p] == 1)
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   81 |               return 0;
+      |               ~~~~~~~~~   
+   82 |         }
+      |         ~                 
+   83 |     }
+      |     ~                     
+sudoku.c:82:10: error: expected ‘;’ before ‘}’ token
+   82 |         }
+      |          ^
+      |          ;
+   83 |     }
+      |     ~     
+test.c:245:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  245 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:262:1: error: expected declaration or statement at end of input
+  262 | }
+      | ^
+In file included from test.c:5:
+sudoku.c:52:46: error: variable ‘aux_array_submatriz’ set but not used [-Werror=unused-but-set-variable]
+   52 |   int aux_array_fila[10], aux_array_col[10], aux_array_submatriz[10];
+      |                                              ^~~~~~~~~~~~~~~~~~~
+test.c:263: error: control reaches end of non-void function [-Werror=return-type]
+At top level:
+test.c:245:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  245 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:7:8: error: ‘_strdup’ defined but not used [-Werror=unused-function]
+    7 | char * _strdup(const char * str) {
+      |        ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d8f6eb4

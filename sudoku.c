@@ -75,21 +75,11 @@ int is_valid(Node* n){
         {
           int l = 3 * (j / 3) + (k / 3);
           int p = 3 * (j % 3) + (k % 3);
-          printf("%i ", n->sudo[l][p]);
-          if(p%3 == 2) printf("\n");
           if((n->sudo[l][p] != 0) && (aux_array_submatriz[n->sudo[l][p]] == 0))
               aux_array_submatriz[n->sudo[l][p]] = 1;
           else if(aux_array_submatriz[n->sudo[l][p]] == 1)
               return 0;
         }
-    printf("\n");
-    }
-  int m=4,p; 
-  for(p=0;p<9;p++){
-      int i=3*(m/3) + (p/3) ;
-      int j=3*(m%3) + (p%3) ;
-      printf("%d ",n->sudo[i][j]);
-      if(p%3 == 2) printf("\n");
   }
   return 1;
 }

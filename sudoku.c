@@ -72,6 +72,7 @@ int is_valid(Node* n){
             {
               aux_array_submatrix[n->sudo[k][l]] = 1;
               printf("%i ", aux_array_submatrix[n->sudo[k][l]]);
+              printf("h%i ", n->sudo[k][l]);
             }
             else if(aux_array_submatrix[n->sudo[k][l]] == 1)
              { 

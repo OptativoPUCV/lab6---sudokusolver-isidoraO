@@ -103,3 +103,14 @@ Thu 16 May 2024 01:51:28 AM UTC:
  tests:  2|4
 total_score: 15/70
 9d55764
+Thu 16 May 2024 02:09:35 AM UTC: 
+ sudoku.c | 24 +++++-------------------
+ 1 file changed, 5 insertions(+), 19 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:55:7: error: unused variable ‘algo’ [-Werror=unused-variable]
+   55 |   int algo = 0;
+      |       ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+1121347

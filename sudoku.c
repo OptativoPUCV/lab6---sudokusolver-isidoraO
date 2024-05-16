@@ -68,8 +68,6 @@ int is_valid(Node* n){
         for(p=0;p<9;p++){
             int k=3*(2/3) + (p/3) ;
             int l=3*(2%3) + (p%3) ;
-            printf("%i ", n->sudo[k][l]);
-            if(p%3 == 2) printf("\n");
             if(aux_array_submatrix[n->sudo[k][l] == 0])
               aux_array_submatrix[n->sudo[k][l]] = 1;
             else if(aux_array_submatrix[n->sudo[k][l]] == 1)

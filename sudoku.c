@@ -44,7 +44,7 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-  int aux_array_fila[10], aux_array_col[10], aux_array_submatrix[10], k,l;
+  int aux_array_fila[10], aux_array_col[10], aux_array_submatrix[10], p;
 
   for(int j = 0; j < 9; j++)
   {
@@ -65,8 +65,9 @@ int is_valid(Node* n){
           aux_array_col[n->sudo[j][i]] = 1;
         else if(aux_array_col[n->sudo[j][i]] == 1)
             return 0;
-          k=3*(j/3) + (i/3) ;
-          l=3*(j%3) + (i%3) ;
+        for(p=0;p<9;p++){
+            int k=3*(j/3) + (p/3) ;
+            int l=3*(j%3) + (p%3) ;
            printf("pp%i ", n->sudo[k][l]);
             if((n->sudo[k][l] != 0) && (aux_array_submatrix[n->sudo[k][l]] == 0))
             {
@@ -75,11 +76,11 @@ int is_valid(Node* n){
               printf("h%i ", n->sudo[k][l]);
             }
             else if(aux_array_submatrix[n->sudo[k][l]] == 1)
-             { 
+            { 
                 printf("d%i ",n->sudo[k][l]);
                return 0;
-              }
-        
+            }
+        }
       }
     }
   return 1;

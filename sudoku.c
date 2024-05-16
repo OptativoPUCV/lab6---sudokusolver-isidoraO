@@ -54,7 +54,7 @@ int is_valid(Node* n){
           return 0;
     
   for(int i = 0; i < 9; i++)
-    if((n->sudo[0][i] != 0) && (aux_array[n->sudo[0][1]] == 0))
+    if((n->sudo[0][i] != 0) && (aux_array[n->sudo[0][i]] == 0))
       aux_array[n->sudo[0][i]] = 1;
     else if(aux_array[n->sudo[0][i]] == 1)
       return 0;

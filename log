@@ -969,3 +969,34 @@ test.c:7:8: error: ‘_strdup’ defined but not used [-Werror=unused-function]
 cc1: all warnings being treated as errors
 Compilation failed
 d8f6eb4
+Thu 16 May 2024 04:18:40 AM UTC: 
+ sudoku.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:78:77: error: expected ‘]’ before ‘)’ token
+   78 |           if((n->sudo[l][p] != 0) && (aux_array_submatriz[n->sudo[l][p] == 0))
+      |                                                                             ^
+      |                                                                             ]
+sudoku.c:79:52: error: expected ‘]’ before ‘;’ token
+   79 |               aux_array_submatriz[n->sudo[l][p] = 1;
+      |                                                    ^
+      |                                                    ]
+sudoku.c:79:34: error: value computed is not used [-Werror=unused-value]
+   79 |               aux_array_submatriz[n->sudo[l][p] = 1;
+      |               ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+   80 |           else if(aux_array_submatriz[n->sudo[l][p]] == 1)
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   81 |               return 0;
+      |               ~~~~~~~~~           
+   82 |         }
+      |         ~                         
+sudoku.c:81:24: error: expected ‘;’ before ‘}’ token
+   81 |               return 0;
+      |                        ^
+      |                        ;
+   82 |         }
+      |         ~               
+cc1: all warnings being treated as errors
+Compilation failed
+eafde6b

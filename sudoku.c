@@ -62,6 +62,7 @@ int is_valid(Node* n){
         else if(aux_array[n->sudo[i][j]] == 1)
             return 0;
       }
+    printf("\n");
   }
   for(int j = 0; j < 9; j++)
   {

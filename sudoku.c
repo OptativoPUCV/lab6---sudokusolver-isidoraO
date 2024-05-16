@@ -83,9 +83,11 @@ List* get_adj_nodes(Node* n){
 int is_final(Node* n){
   int i, j, k = 0; 
   for(;i < 9; i++)
-    {
       if(n->sudo[j][k] == n->sudo[i][k]) return 0;
-    }
+  
+  i = 0;
+  for(;k < 9; k++)
+    if(n->sudo[i][j] == n->sudo[i][k]) return 0;
   return 0;
 }
 

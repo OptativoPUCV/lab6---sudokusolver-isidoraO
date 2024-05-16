@@ -43,21 +43,17 @@ void print_node(Node* n){
     printf("\n");
 }
 
-void inicializar_array(int *array, int *array2)
-{
-  for(int i = 0; i < 10 ; i++)
-    {
-      array[i] = 0;
-      array2[i] = 0;
-    }
-}
-
 int is_valid(Node* n){
   int aux_array_fila[10];
   int aux_array_col[10];
   for(int j = 0; j < 9; j++)
   {
-    inicializar_array(aux_array_fila, aux_array_col);
+    for(int i = 0; i < 10 ; i++)
+      {
+        aux_array_fila[i] = 0;
+        aux_array_col[i] = 0;
+      }
+    
     for(int i = 0; i < 9; i++)
       {
         if((n->sudo[i][j] != 0) && (aux_array_fila[n->sudo[i][j]] == 0))

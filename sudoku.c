@@ -50,29 +50,26 @@ void inicializar_array(int *array)
 }
 
 int is_valid(Node* n){
-  int aux_array[10];
+  int aux_array_fila[10];
+  int aux_array_col[10];
   for(int j = 0; j < 9; j++)
   {
-    inicializar_array(aux_array);
+    inicializar_array(aux_array_fila);
     for(int i = 0; i < 9; i++)
       {
         printf("%i ", n->sudo[j][i]);
-        if((n->sudo[i][j] != 0) && (aux_array[n->sudo[i][j]] == 0))
-            aux_array[n->sudo[i][j]] = 1;
-        else if(aux_array[n->sudo[i][j]] == 1)
+        if((n->sudo[i][j] != 0) && (aux_array_fila[n->sudo[i][j]] == 0))
+              aux_array_fila[n->sudo[i][j]] = 1;
+        else if(aux_array_fila[n->sudo[i][j]] == 1)
+            return 0;
+        if((n->sudo[j][i] != 0) && (aux_array_fila[n->sudo[j][i]] == 0))
+          aux_array_col[n->sudo[j][i]] = 1
+        else if(aux_array_col[n->sudo[j][i]] == 1)
             return 0;
       }
     printf("\n");
   }
-  for(int j = 0; j < 9; j++)
-  {
-    inicializar_array(aux_array);
-    for(int i = 0; i < 9; i++)
-      if((n->sudo[0][i] != 0) && (aux_array[n->sudo[0][i]] == 0))
-        aux_array[n->sudo[0][i]] = 1;
-      else if(aux_array[n->sudo[0][i]] == 1)
-        return 0;
-  }
+
   return 1;
 }
 

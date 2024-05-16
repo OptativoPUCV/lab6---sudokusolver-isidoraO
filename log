@@ -403,3 +403,20 @@ Thu 16 May 2024 03:26:12 AM UTC:
  tests:  4|4
 total_score: 25/70
 27d5f1a
+Thu 16 May 2024 03:30:10 AM UTC: 
+ sudoku.c | 25 +++++++++++--------------
+ 1 file changed, 11 insertions(+), 14 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:66:43: error: expected ‘;’ before ‘else’
+   66 |           aux_array_col[n->sudo[j][i]] = 1
+      |                                           ^
+      |                                           ;
+   67 |         else if(aux_array_col[n->sudo[j][i]] == 1)
+      |         ~~~~                               
+sudoku.c:54:7: error: variable ‘aux_array_col’ set but not used [-Werror=unused-but-set-variable]
+   54 |   int aux_array_col[10];
+      |       ^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+936424f

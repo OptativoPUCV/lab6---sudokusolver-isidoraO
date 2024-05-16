@@ -59,11 +59,14 @@ List* get_adj_nodes(Node* n){
         if(n->sudo[i][j] == 0)
         {
           nodo->sudo[i][j] = cont;
-          pushBack(list, nodo);
+          cont++;
         }
         else
           nodo->sudo[i][j] = n->sudo[i][j];
+
+        if(cont == 9) cont = 1;
       }
+  if(cont != 1) pushBack(list, nodo);
   return list;
 }
 

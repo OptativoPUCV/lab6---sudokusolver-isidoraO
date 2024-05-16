@@ -57,7 +57,7 @@ int is_valid(Node* n){
       {
         aux_array_fila[i] = 0;
         aux_array_col[i] = 0;
-        aux_array_submatriz[i] = 0;
+        //aux_array_submatriz[i] = 0;
       }
     
     for(int i = 0; i < 9; i++)

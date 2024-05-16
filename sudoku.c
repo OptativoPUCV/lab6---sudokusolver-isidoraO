@@ -51,24 +51,31 @@ int is_valid(Node* n){
 
 List* get_adj_nodes(Node* n){
   List* list=createList();
-  Node *nodo = createNode();
   int cont = 1;
   int algo = 0;
   for(int i=0;i<9;i++)
     for(int j=0;j<9;j++)
       {
-        if(n->sudo[i][j] == 0)
+        if(n->sudo[i][j])
         {
-          nodo->sudo[i][j] = cont;
-          cont++;
-          algo = 1;
-        }
-        else
-          nodo->sudo[i][j] = n->sudo[i][j];
+          Node *nodo = createNode();
 
-        if(cont == 9) cont = 1;
+          for(int k=0;k<9;k++)
+            for(int m = 0; m < 9; m++)
+              {
+                nodo->sudo[k][m] = n->sudo[k][m];
+                if(nodo->sudo[k][m] == 0)
+                {
+                  nodo->sudo[k][m] = cont;
+                  algo++;
+                }
+                if(cont == 9)  cont = 0;
+              }
+          if(algo != 0)
+            pushBack(list, nodo);
+          cont++;
+        }
       }
-  if(algo != 0) pushBack(list, nodo);
   return list;
 }
 

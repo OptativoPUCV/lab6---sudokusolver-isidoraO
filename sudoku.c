@@ -68,9 +68,6 @@ int is_valid(Node* n){
         
       }
   }
-    int k=1,p; 
-
-  }
 
   return 1;
 }

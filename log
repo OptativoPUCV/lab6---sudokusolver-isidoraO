@@ -549,3 +549,17 @@ sudoku.c:73:3: error: control reaches end of non-void function [-Werror=return-t
 cc1: all warnings being treated as errors
 Compilation failed
 ae95603
+Thu 16 May 2024 03:41:44 AM UTC: 
+ sudoku.c | 3 ---
+ 1 file changed, 3 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:47:69: error: unused variable ‘p’ [-Werror=unused-variable]
+   47 |   int aux_array_fila[10],aux_array_col[10],aux_array_submatrix[10], p;
+      |                                                                     ^
+sudoku.c:47:44: error: variable ‘aux_array_submatrix’ set but not used [-Werror=unused-but-set-variable]
+   47 |   int aux_array_fila[10],aux_array_col[10],aux_array_submatrix[10], p;
+      |                                            ^~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ce772eb

@@ -70,7 +70,7 @@ List* get_adj_nodes(Node* n){
                 }
                 if(cont == 9)  cont = 0;
               }
-          if(algo != 0)
+          if(nodo != NULL)
             pushBack(list, nodo);
           cont++;
         }

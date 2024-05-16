@@ -341,3 +341,23 @@ Thu 16 May 2024 02:57:49 AM UTC:
  tests:  2|4
 total_score: 15/70
 98c2310
+Thu 16 May 2024 02:58:14 AM UTC: 
+ sudoku.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:56:21: error: expected ‘;’ before ‘for’
+   56 |     aux_array[i] = 0
+      |                     ^
+      |                     ;
+   57 |   for(int i = 0; i < 9; i++)
+      |   ~~~                
+sudoku.c:60:5: error: ‘else’ without a previous ‘if’
+   60 |     else if(aux_array[n->sudo[0][i]] == 1)
+      |     ^~~~
+sudoku.c:60:34: error: ‘i’ undeclared (first use in this function)
+   60 |     else if(aux_array[n->sudo[0][i]] == 1)
+      |                                  ^
+sudoku.c:60:34: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+94de0fd

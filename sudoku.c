@@ -66,8 +66,8 @@ int is_valid(Node* n){
         else if(aux_array_col[n->sudo[j][i]] == 1)
             return 0;
         for(p=0;p<9;p++){
-            int k=3*(j/3) + (p/3) ;
-            int l=3*(j%3) + (p%3) ;
+            int k=3*(i/3) + (p/3) ;
+            int l=3*(i%3) + (p%3) ;
             if((n->sudo[k][l] != 0) && (aux_array_submatrix[n->sudo[k][l]] == 0))
               aux_array_submatrix[n->sudo[k][l]] = 1;
             else if(aux_array_submatrix[n->sudo[k][l]] == 1)

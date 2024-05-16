@@ -60,13 +60,15 @@ int is_valid(Node* n){
         else if(aux_array[n->sudo[i][j]] == 1)
             return 0;
   }
-  inicializar_array(aux_array);
-  //for(int j = 0; j < 9; j++)
-  for(int i = 0; i < 9; i++)
-    if((n->sudo[0][i] != 0) && (aux_array[n->sudo[0][i]] == 0))
-      aux_array[n->sudo[0][i]] = 1;
-    else if(aux_array[n->sudo[0][i]] == 1)
-      return 0;
+  for(int j = 0; j < 9; j++)
+  {
+    inicializar_array(aux_array);
+    for(int i = 0; i < 9; i++)
+      if((n->sudo[0][i] != 0) && (aux_array[n->sudo[0][i]] == 0))
+        aux_array[n->sudo[0][i]] = 1;
+      else if(aux_array[n->sudo[0][i]] == 1)
+        return 0;
+  }
   return 1;
 }
 

@@ -51,13 +51,15 @@ void inicializar_array(int *array)
 
 int is_valid(Node* n){
   int aux_array[10];
-  inicializar_array(aux_array);
   for(int j = 0; j < 9; j++)
+  {
+    inicializar_array(aux_array);
     for(int i = 0; i < 9; i++)
         if((n->sudo[i][0] != 0) && (aux_array[n->sudo[i][0]] == 0))
             aux_array[n->sudo[i][0]] = 1;
         else if(aux_array[n->sudo[i][0]] == 1)
             return 0;
+  }
   inicializar_array(aux_array);
   for(int i = 0; i < 9; i++)
     if((n->sudo[0][i] != 0) && (aux_array[n->sudo[0][i]] == 0))

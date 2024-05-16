@@ -99,7 +99,7 @@ List* get_adj_nodes(Node* n)
 
           printf("%i ",is_valid(nodo));
           for(int k=0;k<9;k++)
-            for(int m = 0; m < 9; m++)
+            {for(int m = 0; m < 9; m++)
               {
                 if(nodo->sudo[k][m] == 0)
                 {
@@ -109,8 +109,10 @@ List* get_adj_nodes(Node* n)
                 }
                 if(cont == 9)  
                   cont = 0;
-                break;
+
               }
+              break;
+            }
           printf("f%i ",is_valid(nodo));
           if(nodo != NULL)
             pushBack(list, nodo);

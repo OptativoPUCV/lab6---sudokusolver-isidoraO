@@ -103,6 +103,8 @@ List* get_adj_nodes(Node* n)
           if(nodo != NULL)
             pushBack(list, nodo);
           cont++;
+          i = 0;
+          j = 0;
           break;
         }
       }

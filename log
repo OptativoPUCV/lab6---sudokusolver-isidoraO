@@ -114,3 +114,20 @@ sudoku.c:55:7: error: unused variable ‘algo’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 1121347
+Thu 16 May 2024 02:10:02 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:59:9: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   59 |         if(n->sudo[i][j] == 0)
+      |         ^~
+sudoku.c:61:11: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   61 |           pushBack(list, nodo);
+      |           ^~~~~~~~
+sudoku.c:62:9: error: ‘else’ without a previous ‘if’
+   62 |         else
+      |         ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f934d63

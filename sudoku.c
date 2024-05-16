@@ -96,18 +96,9 @@ List* get_adj_nodes(Node* n)
         {
           Node *nodo = createNode();
           nodo = copy(n);
-          for(int k=0;k<9;k++)
-            for(int m = 0; m < 9; m++)
-              {
-                if(nodo->sudo[k][m] == 0)
-                {
-                    nodo->sudo[k][m] = cont;
-                    break;
-                }
-                if(cont == 9)  
-                  cont = 0;
-              }
-
+          nodo->sudo[i][j] = cont;
+          printf("%i ", nodo->sudo[i][j]);
+          
           if(nodo != NULL)
             pushBack(list, nodo);
           cont++;

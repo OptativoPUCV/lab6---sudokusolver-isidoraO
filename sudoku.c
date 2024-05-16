@@ -66,6 +66,7 @@ int is_valid(Node* n){
         else if(aux_array_col[n->sudo[j][i]] == 1)
             return 0;
       }
+  }
     int k=4,p; 
     for(p=0;p<9;p++){
         int i=3*(k/3) + (p/3) ;

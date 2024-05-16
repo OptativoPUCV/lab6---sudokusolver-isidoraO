@@ -1000,3 +1000,30 @@ sudoku.c:81:24: error: expected ‘;’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 eafde6b
+Thu 16 May 2024 04:19:10 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:79:52: error: expected ‘]’ before ‘;’ token
+   79 |               aux_array_submatriz[n->sudo[l][p] = 1;
+      |                                                    ^
+      |                                                    ]
+sudoku.c:79:34: error: value computed is not used [-Werror=unused-value]
+   79 |               aux_array_submatriz[n->sudo[l][p] = 1;
+      |               ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+   80 |           else if(aux_array_submatriz[n->sudo[l][p]] == 1)
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   81 |               return 0;
+      |               ~~~~~~~~~           
+   82 |         }
+      |         ~                         
+sudoku.c:81:24: error: expected ‘;’ before ‘}’ token
+   81 |               return 0;
+      |                        ^
+      |                        ;
+   82 |         }
+      |         ~               
+cc1: all warnings being treated as errors
+Compilation failed
+13af073

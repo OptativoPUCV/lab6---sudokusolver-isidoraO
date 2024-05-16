@@ -55,10 +55,13 @@ int is_valid(Node* n){
   {
     inicializar_array(aux_array);
     for(int i = 0; i < 9; i++)
+      {
+        printf("%i ", n->sudo[j][i]);
         if((n->sudo[i][j] != 0) && (aux_array[n->sudo[i][j]] == 0))
             aux_array[n->sudo[i][j]] = 1;
         else if(aux_array[n->sudo[i][j]] == 1)
             return 0;
+      }
   }
   for(int j = 0; j < 9; j++)
   {

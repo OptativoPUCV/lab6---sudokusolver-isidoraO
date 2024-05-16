@@ -303,3 +303,17 @@ Thu 16 May 2024 02:51:31 AM UTC:
  tests:  2|4
 total_score: 15/70
 cf5df41
+Thu 16 May 2024 02:52:14 AM UTC: 
+ sudoku.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:53:36: error: expected ‘;’ before ‘:’ token
+   53 |       printf("%ij ", n->sudo[i][0]):
+      |                                    ^
+      |                                    ;
+sudoku.c:56:7: error: ‘else’ without a previous ‘if’
+   56 |       else if(aux_array[n->sudo[i][0]] == 1)
+      |       ^~~~
+Compilation failed
+3432831

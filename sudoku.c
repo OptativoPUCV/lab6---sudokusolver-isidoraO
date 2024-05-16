@@ -50,6 +50,7 @@ int is_valid(Node* n){
   for(int i = 0; i < 9; i++)
     {
       printf("%i ", aux_array[n->sudo[i][0]]);
+      printf("%ij ", n->sudo[i][0]):
       if(aux_array[n->sudo[i][0]] == 0)
           aux_array[n->sudo[i][0]] = 1;
       else if(aux_array[n->sudo[i][0]] == 1)

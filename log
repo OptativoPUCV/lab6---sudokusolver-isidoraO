@@ -664,3 +664,14 @@ Thu 16 May 2024 03:50:53 AM UTC:
  tests:  4|4
 total_score: 25/70
 9772ff9
+Thu 16 May 2024 03:51:42 AM UTC: 
+ sudoku.c | 12 ++----------
+ 1 file changed, 2 insertions(+), 10 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:47:45: error: variable ‘aux_array_submatrix’ set but not used [-Werror=unused-but-set-variable]
+   47 |   int aux_array_fila[10],aux_array_col[10], aux_array_submatrix[10], p;
+      |                                             ^~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+58b585c

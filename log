@@ -8,3 +8,14 @@ Thu 16 May 2024 01:06:09 AM UTC:
  tests:  0|5
 total_score: 0/70
 1117710
+Thu 16 May 2024 01:17:52 AM UTC: 
+ sudoku.c | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:67:18: error: ‘nodo’ undeclared (first use in this function)
+   67 |   pushBack(list, nodo);
+      |                  ^~~~
+sudoku.c:67:18: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+29cde26

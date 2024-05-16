@@ -49,7 +49,7 @@ int is_valid(Node* n){
       aux_array[i] = 0;
   for(int i = 0; i < 9; i++)
       if(aux_array[n->sudo[i][0]] == 1)
-          return 0;
+          return 1;
       else
           aux_array[n->sudo[i][0]] = 1;
   return 1;

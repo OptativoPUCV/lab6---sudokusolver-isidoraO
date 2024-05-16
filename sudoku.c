@@ -82,6 +82,7 @@ int is_valid(Node* n){
           else if(aux_array_submatriz[n->sudo[l][p]] == 1)
               return 0;
         }
+    printf("\n");
     }
   int m=4,p; 
   for(p=0;p<9;p++){

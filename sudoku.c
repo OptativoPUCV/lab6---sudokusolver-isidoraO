@@ -98,7 +98,7 @@ List* get_adj_nodes(Node* n)
           nodo = copy(n);
           nodo->sudo[i][j] = cont;
           printf("i:%i j:%i \n", i, j);
-          printf("cont:%i ", nodo->sudo[i][j]);
+          printf("cont:%i \n", nodo->sudo[i][j]);
           
           if(nodo != NULL)
             pushBack(list, nodo);

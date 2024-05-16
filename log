@@ -802,3 +802,20 @@ Thu 16 May 2024 04:04:11 AM UTC:
  tests:  2|4
 total_score: 15/70
 288841c
+Thu 16 May 2024 04:04:51 AM UTC: 
+ sudoku.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:66:14: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   66 |         else if(aux_array_col[n->sudo[j][i]] == 1)
+      |              ^~
+sudoku.c:68:13: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   68 |             int k=3*(j/3) + (i/3) ;
+      |             ^~~
+sudoku.c:47:71: error: unused variable ‘p’ [-Werror=unused-variable]
+   47 |   int aux_array_fila[10], aux_array_col[10], aux_array_submatrix[10], p;
+      |                                                                       ^
+cc1: all warnings being treated as errors
+Compilation failed
+f09080a

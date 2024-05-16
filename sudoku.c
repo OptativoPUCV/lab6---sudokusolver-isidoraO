@@ -106,7 +106,6 @@ List* get_adj_nodes(Node* n)
                 if(cont == 9)  
                   cont = 0;
               }
-          printf("%i ", is_valid(nodo));
           if(nodo != NULL)
             pushBack(list, nodo);
           cont++;

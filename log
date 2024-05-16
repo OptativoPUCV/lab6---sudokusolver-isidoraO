@@ -563,3 +563,13 @@ sudoku.c:47:44: error: variable ‘aux_array_submatrix’ set but not used [-Wer
 cc1: all warnings being treated as errors
 Compilation failed
 ce772eb
+Thu 16 May 2024 03:41:59 AM UTC: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:47:44: error: expected identifier or ‘(’ before ‘,’ token
+   47 |   int aux_array_fila[10],aux_array_col[10],, p;
+      |                                            ^
+Compilation failed
+657c023

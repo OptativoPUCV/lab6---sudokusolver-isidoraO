@@ -615,3 +615,16 @@ Thu 16 May 2024 03:47:59 AM UTC:
  tests:  4|4
 total_score: 25/70
 7fd8d0a
+Thu 16 May 2024 03:48:23 AM UTC: 
+ sudoku.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:78:11: error: redeclaration of ‘p’ with no linkage
+   78 |   int k=2,p;
+      |           ^
+sudoku.c:47:70: note: previous declaration of ‘p’ with type ‘int’
+   47 |   int aux_array_fila[10],aux_array_col[10], aux_array_submatrix[10], p;
+      |                                                                      ^
+Compilation failed
+8b25b23

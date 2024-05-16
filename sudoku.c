@@ -57,10 +57,12 @@ List* get_adj_nodes(Node* n){
         if(n->sudo[i][j])
         {
           Node *nodo = createNode();
+          
           for(int k=0;k<9;k++)
             for(int m = 0; m < 9; m++)
               {
                 nodo->sudo[k][m] = n->sudo[k][m];
+                nodo->sudo[i][j] = 1;
               }
           pushBack(list, nodo);
         }
@@ -71,7 +73,11 @@ List* get_adj_nodes(Node* n){
 
 
 int is_final(Node* n){
-    return 0;
+  for(int i = 0; i < 9; i++)
+    {
+      
+    }
+  return 0;
 }
 
 Node* DFS(Node* initial, int* cont){

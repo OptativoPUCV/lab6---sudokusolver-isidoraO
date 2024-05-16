@@ -515,3 +515,37 @@ Thu 16 May 2024 03:37:35 AM UTC:
  tests:  4|4
 total_score: 25/70
 1932f9a
+Thu 16 May 2024 03:41:38 AM UTC: 
+ sudoku.c | 10 +++-------
+ 1 file changed, 3 insertions(+), 7 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:71:13: error: redeclaration of ‘p’ with no linkage
+   71 |     int k=1,p;
+      |             ^
+sudoku.c:47:69: note: previous declaration of ‘p’ with type ‘int’
+   47 |   int aux_array_fila[10],aux_array_col[10],aux_array_submatrix[10], p;
+      |                                                                     ^
+sudoku.c:71:13: error: unused variable ‘p’ [-Werror=unused-variable]
+   71 |     int k=1,p;
+      |             ^
+sudoku.c:71:9: error: unused variable ‘k’ [-Werror=unused-variable]
+   71 |     int k=1,p;
+      |         ^
+sudoku.c:47:44: error: variable ‘aux_array_submatrix’ set but not used [-Werror=unused-but-set-variable]
+   47 |   int aux_array_fila[10],aux_array_col[10],aux_array_submatrix[10], p;
+      |                                            ^~~~~~~~~~~~~~~~~~~
+sudoku.c: At top level:
+sudoku.c:75:3: error: expected identifier or ‘(’ before ‘return’
+   75 |   return 1;
+      |   ^~~~~~
+sudoku.c:76:1: error: expected identifier or ‘(’ before ‘}’ token
+   76 | }
+      | ^
+sudoku.c: In function ‘is_valid’:
+sudoku.c:73:3: error: control reaches end of non-void function [-Werror=return-type]
+   73 |   }
+      |   ^
+cc1: all warnings being treated as errors
+Compilation failed
+ae95603

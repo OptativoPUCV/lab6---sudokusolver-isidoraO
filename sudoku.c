@@ -104,14 +104,14 @@ List* get_adj_nodes(Node* n)
                 if(nodo->sudo[k][m] == 0)
                 {
                     nodo->sudo[k][m] = cont;    
-                    printf("x%i ",nodo->sudo[k][m]); 
+
                     break;
                 }
                 if(cont == 9)  
                   cont = 0;
                 break;
               }
-
+          printf("f%i ",is_valid(nodo));
           if(nodo != NULL)
             pushBack(list, nodo);
           cont++;

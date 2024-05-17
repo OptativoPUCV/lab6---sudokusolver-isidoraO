@@ -99,7 +99,7 @@ List* get_adj_nodes(Node* n)
                 new_node->sudo[i][j] = k;
                 for(int h = 0; h < 9; h++)
                   for(int f = 0; f < 9; f++)
-                    printf("%i ", new_node->sudo[h][j]);
+                    printf("%i ", new_node->sudo[h][f]);
                 pushBack(list, new_node);
               }
           }

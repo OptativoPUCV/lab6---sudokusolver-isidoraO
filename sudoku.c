@@ -95,14 +95,11 @@ List* get_adj_nodes(Node* n)
           {
            // Node *new_node = createNode();
             Node *new_node = copy(n);
-            for(int h = 0; h < 9; h++)
-              for(int f = 0; f < 9; f++)
-                printf("%i ", new_node->sudo[h][f]);
             for(int k = 1; k < 10; k++)
               {
-                
+                new_node->sudo[i][j] = k;
+                pushBack(list, new_node);
               }
-            pushBack(list, new_node);
           }
         }
     }

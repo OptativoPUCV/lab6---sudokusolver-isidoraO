@@ -63,42 +63,25 @@ int is_valid(Node* n){
     for(int j = 0; j < 9; j++)
       {
         if((n->sudo[i][j] != 0) && (aux_array_fila[n->sudo[i][j]] == 0))
-              aux_array_fila[n->sudo[i][j]] = 1;
+          aux_array_fila[n->sudo[i][j]] = 1;
         else if(aux_array_fila[n->sudo[i][j]] == 1)
-            return 0;
+          return 0;
         if((n->sudo[j][i] != 0) && (aux_array_fila[n->sudo[j][i]] == 0))
           aux_array_col[n->sudo[j][i]] = 1;
         else if(aux_array_col[n->sudo[j][i]] == 1)
-            return 0;
+          return 0;
       }
     for(int k = 0; k < 9; k++)
       {
         int p = 3*(i/3) + (k/3);
         int t = 3*(i%3) + (k%3);
 
-
         if((n->sudo[p][t] != 0) && (aux_array_submatriz[n->sudo[p][t]] == 0))
-            aux_array_submatriz[n->sudo[p][t]] = 1;
+          aux_array_submatriz[n->sudo[p][t]] = 1;
         else if(aux_array_submatriz[n->sudo[p][t]] == 1)
-        {
-          printf("hello");
-          printf("ggf%i ", aux_array_submatriz[n->sudo[p][t]]);
           return 0;
-        }
-        printf("ggg%i ", aux_array_submatriz[n->sudo[p][t]]);
-
       }
   }
-  printf("Hello");
-  for(int i = 0; i < 10; i++)
-    printf("%i ", aux_array_submatriz[i]);
-  printf("\n");
-  for(int j = 0;j < 9; j++)
-    {
-      for(int i = 0; i < 9; i++)
-        printf("f%i ", n->sudo[j][i]);
-      printf(" \n");
-    }
   return 1;
 }
 

@@ -109,7 +109,7 @@ List* get_adj_nodes(Node* n)
                     break;
                 }
                 if(cont == 9)  
-                  break;
+                  return list;
               }
               break;
             }

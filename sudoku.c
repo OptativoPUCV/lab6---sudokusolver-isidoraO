@@ -96,6 +96,7 @@ int is_valid(Node* n){
     {
       for(int i = 0; i < 9; i++)
         printf("f%i ", n->sudo[i][j]);
+      printf(" \n");
     }
   return 1;
 }

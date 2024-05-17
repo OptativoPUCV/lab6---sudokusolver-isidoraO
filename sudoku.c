@@ -51,7 +51,7 @@ void inicializar_array(int *array)
 int is_valid(Node* n){
   int aux_array_fila[10], aux_array_col[10], aux_array_submatriz[10];
 
-  for(int j = 0; j < 9; j++)
+  for(int i = 0; i < 9; i++)
   {
     for(int i = 0; i < 10 ; i++)
       {
@@ -60,15 +60,15 @@ int is_valid(Node* n){
         aux_array_submatriz[i] = 0;
       }
 
-    for(int i = 0; i < 9; i++)
+    for(int j = 0; j < 9; j++)
       {
-        if((n->sudo[j][i] != 0) && (aux_array_fila[n->sudo[j][i]] == 0))
-              aux_array_fila[n->sudo[j][i]] = 1;
-        else if(aux_array_fila[n->sudo[j][i]] == 1)
-            return 0;
         if((n->sudo[i][j] != 0) && (aux_array_fila[n->sudo[i][j]] == 0))
-          aux_array_col[n->sudo[i][j]] = 1;
-        else if(aux_array_col[n->sudo[i][j]] == 1)
+              aux_array_fila[n->sudo[i][j]] = 1;
+        else if(aux_array_fila[n->sudo[i][j]] == 1)
+            return 0;
+        if((n->sudo[j][i] != 0) && (aux_array_fila[n->sudo[j][i]] == 0))
+          aux_array_col[n->sudo[j][i]] = 1;
+        else if(aux_array_col[n->sudo[j][i]] == 1)
             return 0;
       }
     for(int k = 0; k < 9; k++)

@@ -88,10 +88,10 @@ List* get_adj_nodes(Node* n)
 {
   List* list = createList();
   //int i = 1, j = 0, k = 0;
-  while(i <= 9)
-    {
-      
-    }
+  //while(i <= 9)
+   // {
+   //   
+   // }
   return list;
 }
 

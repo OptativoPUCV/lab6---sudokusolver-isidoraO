@@ -1486,3 +1486,9 @@ sudoku.c:91:9: error: ‘i’ undeclared (first use in this function)
 sudoku.c:91:9: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 4b34002
+Fri 17 May 2024 10:05:39 PM UTC: 
+ sudoku.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+ tests:  3|4
+total_score: 20/70
+b8e1f90

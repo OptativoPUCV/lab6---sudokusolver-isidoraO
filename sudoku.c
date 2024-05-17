@@ -49,7 +49,7 @@ void inicializar_array(int *array)
 }
 
 int is_valid(Node* n){
-  int aux_array_fila[10], aux_array_col[10], aux_array_submatriz[10], k;
+  int aux_array_fila[10], aux_array_col[10], aux_array_submatriz[10];
 
   for(int j = 0; j < 9; j++)
   {
@@ -71,13 +71,13 @@ int is_valid(Node* n){
         else if(aux_array_col[n->sudo[j][i]] == 1)
             return 0;
       }
-    for(k = 0; k < 9; k++)
+    for(int k = 0; k < 9; k++)
       {
         int p = 3*(j/3) + (k/3);
         int t = 3*(j%3) + (k%3);
         if((n->sudo[p][t] != 0) && (aux_array_submatriz[n->sudo[p][t]] == 0))
             aux_array_submatriz[n->sudo[p][t]] = 1;
-        else if(n->sudo[p][t] != 0 && aux_array_submatriz[n->sudo[p][t]] == 1)
+        else if(aux_array_submatriz[n->sudo[p][t]] == 1)
             return 0;
       }
   }
@@ -108,7 +108,6 @@ List* get_adj_nodes(Node* n)
               }
               break;
             }
-
           if(nodo != NULL && is_valid(nodo) == 1)
             pushBack(list, nodo);
           cont++;

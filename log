@@ -1686,3 +1686,13 @@ Fri 17 May 2024 10:42:19 PM UTC:
  tests:  1|4
 total_score: 10/70
 e429639
+Fri 17 May 2024 10:42:44 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:82:9: error: ‘else’ without a previous ‘if’
+   82 |         else if(aux_array_submatriz[n->sudo[p][t]] == 1)
+      |         ^~~~
+Compilation failed
+67abeb7

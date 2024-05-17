@@ -79,7 +79,7 @@ int is_valid(Node* n){
             aux_array_submatriz[n->sudo[p][t]] = 1;
 
         printf("gg%i ", aux_array_submatriz[n->sudo[p][t]]);
-        if(aux_array_submatriz[n->sudo[p][t]] == 1)
+        else if(aux_array_submatriz[n->sudo[p][t]] == 1)
         {
           printf("hello");
           return 0;

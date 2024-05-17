@@ -95,7 +95,6 @@ List* get_adj_nodes(Node* n)
       Node* new_node = createNode();
       new_node = copy(n);
       new_node->sudo[j][k] = i;
-      if(is_valid(new_node))
         pushBack(list, new_node);
       
     }

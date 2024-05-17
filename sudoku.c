@@ -59,7 +59,7 @@ int is_valid(Node* n){
         aux_array_col[i] = 0;
         aux_array_submatriz[i] = 0;
       }
-    
+
     for(int i = 0; i < 9; i++)
       {
         if((n->sudo[i][j] != 0) && (aux_array_fila[n->sudo[i][j]] == 0))
@@ -75,11 +75,16 @@ int is_valid(Node* n){
       {
         int p = 3*(j/3) + (k/3);
         int t = 3*(j%3) + (k%3);
+        printf("%i ", n->sudo[p][t]);
+        printf("m%i ", aux_array_submatriz[n->sudo[p][t]]);
         if((n->sudo[p][t] != 0) && (aux_array_submatriz[n->sudo[p][t]] == 0))
             aux_array_submatriz[n->sudo[p][t]] = 1;
         else if(n->sudo[p][t] != 0 && aux_array_submatriz[n->sudo[p][t]] == 1)
             return 0;
+        printf("h%i \n", aux_array_submatriz[n->sudo[p][t]]);
       }
+    //return 1;
+
   }
   return 1;
 }
@@ -87,35 +92,35 @@ int is_valid(Node* n){
 List* get_adj_nodes(Node* n)
 {
   List* list = createList();
-  for(int i = 0; i < 9; i++)
-    {
-      for(int j = 0; j < 9; j++)
+  int cont = 1;
+  for(int i=0;i<9;i++)
+    for(int j=0;j<9;j++)
+      {
+        if(n->sudo[i][j] == 0)
         {
-          if(n->sudo[i][j] == 0)
-          {
-            Node *new_node = createNode();
-            new_node = copy(n);
-            for(int k = 1; k < 10; k++)
+          Node *nodo = createNode();
+          nodo = copy(n);
+
+          for(int k=0;k<9;k++)
+            {for(int m = 0; m < 9; m++)
               {
-                new_node->sudo[i][j] = k;
-                pushFront(list, new_node);
+                if(nodo->sudo[k][m] == 0)
+                {
+                    nodo->sudo[k][m] = cont;    
+                    break;
+                }
+                if(cont == 9)  
+                  return list;
               }
-            break;
-          }
+              break;
+            }
+
+          if(nodo != NULL && is_valid(nodo) == 1)
+            pushBack(list, nodo);
+          cont++;
           break;
         }
-    }
-  Node* temp = first(list);
-  while(temp != NULL)
-    {
-      for(int j = 0; j < 9; j++)
-        {for(int k = 0; k < 9; k++)
-          printf("%i ", temp->sudo[j][k]);
-         printf("\n");
-        }
-      printf("\n");
-      temp = next(list);
-    }
+      }
   return list;
 }
 

@@ -106,8 +106,11 @@ List* get_adj_nodes(Node* n)
   while(temp != NULL)
     {
       for(int j = 0; j < 9; j++)
-        for(int k = 0; k < 9; k++)
+        {for(int k = 0; k < 9; k++)
           printf("%i ", temp->sudo[j][k]);
+         printf("\n");
+        }
+      printf("\n");
       temp = next(list);
     }
   return list;

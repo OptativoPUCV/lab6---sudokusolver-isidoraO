@@ -83,7 +83,7 @@ int is_valid(Node* n){
             return 0;
         printf("h%i \n", aux_array_submatriz[n->sudo[p][t]]);
       }
-    return 1;
+    //return 1;
     
   }
   return 1;

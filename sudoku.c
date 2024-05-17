@@ -82,10 +82,10 @@ int is_valid(Node* n){
         else if(aux_array_submatriz[n->sudo[p][t]] == 1)
         {
           printf("hello");
-          printf("gg%i ", aux_array_submatriz[n->sudo[p][t]]);
+          printf("ggf%i ", aux_array_submatriz[n->sudo[p][t]]);
           return 0;
         }
-        printf("gg%i ", aux_array_submatriz[n->sudo[p][t]]);
+        printf("ggg%i ", aux_array_submatriz[n->sudo[p][t]]);
 
       }
   }

@@ -51,7 +51,7 @@ void inicializar_array(int *array)
 int is_valid(Node* n){
   int aux_array_fila[10], aux_array_col[10], aux_array_submatriz[10], k;
 
-  for(int j = 0; j < 9; j++)
+  for(int j = 0; j <= 9; j++)
   {
     for(int i = 0; i < 10 ; i++)
       {

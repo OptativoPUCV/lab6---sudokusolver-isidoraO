@@ -73,8 +73,8 @@ int is_valid(Node* n){
       }
     for(int k = 0; k < 9; k++)
       {
-        int p = 3*(j/3) + (k/3);
-        int t = 3*(j%3) + (k%3);
+        int p = 3*(i/3) + (k/3);
+        int t = 3*(i%3) + (k%3);
 
 
         if((n->sudo[p][t] != 0) && (aux_array_submatriz[n->sudo[p][t]] == 0))

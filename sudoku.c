@@ -93,7 +93,8 @@ List* get_adj_nodes(Node* n)
         {
           if(n->sudo[i][j] == 0)
           {
-            Node *new_node = copy(n);
+            Node *new_node = createNode();
+            new_node = copy(n);
             printf("%i ", new_node->sudo[i][j]);
             for(int k = 1; k < 10; k++)
               {

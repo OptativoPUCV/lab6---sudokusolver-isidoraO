@@ -99,7 +99,7 @@ List* get_adj_nodes(Node* n)
                 if(new_node->sudo[i][j] == 0)
                 {
                   new_node->sudo[i][j] = k;
-                  pushBack(list, new_node);
+                  pushFront(list, new_node);
                 }
               }
           }

@@ -62,13 +62,13 @@ int is_valid(Node* n){
 
     for(int i = 0; i < 9; i++)
       {
-        if((n->sudo[i][j] != 0) && (aux_array_fila[n->sudo[i][j]] == 0))
-              aux_array_fila[n->sudo[i][j]] = 1;
-        else if(aux_array_fila[n->sudo[i][j]] == 1)
-            return 0;
         if((n->sudo[j][i] != 0) && (aux_array_fila[n->sudo[j][i]] == 0))
-          aux_array_col[n->sudo[j][i]] = 1;
-        else if(aux_array_col[n->sudo[j][i]] == 1)
+              aux_array_fila[n->sudo[j][i]] = 1;
+        else if(aux_array_fila[n->sudo[j][i]] == 1)
+            return 0;
+        if((n->sudo[i][j] != 0) && (aux_array_fila[n->sudo[i][j]] == 0))
+          aux_array_col[n->sudo[i][j]] = 1;
+        else if(aux_array_col[n->sudo[i][j]] == 1)
             return 0;
       }
     for(int k = 0; k < 9; k++)

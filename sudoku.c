@@ -75,6 +75,8 @@ int is_valid(Node* n){
       {
         int p = 3*(j/3) + (k/3);
         int t = 3*(j%3) + (k%3);
+        printf("p: %i ",p);
+        printf("t: %i", t);
         if((n->sudo[p][t] != 0) && (aux_array_submatriz[n->sudo[p][t]] == 0))
             aux_array_submatriz[n->sudo[p][t]] = 1;
         else if(aux_array_submatriz[n->sudo[p][t]] == 1)
@@ -97,23 +99,20 @@ List* get_adj_nodes(Node* n)
           Node *nodo = createNode();
           nodo = copy(n);
 
-
           for(int k=0;k<9;k++)
             {for(int m = 0; m < 9; m++)
               {
                 if(nodo->sudo[k][m] == 0)
                 {
                     nodo->sudo[k][m] = cont;    
-
                     break;
                 }
                 if(cont == 9)  
                   cont = 0;
-
               }
               break;
             }
-
+          
           if(nodo != NULL && is_valid(nodo) == 1)
             pushBack(list, nodo);
           cont++;

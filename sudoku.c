@@ -85,6 +85,7 @@ int is_valid(Node* n){
 
       }
   }
+  printf("Hello");
   return 1;
 }
 

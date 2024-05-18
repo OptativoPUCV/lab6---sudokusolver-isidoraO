@@ -137,7 +137,7 @@ Node* DFS(Node* initial, int* cont){
           push(stack, aux);
           aux = next(adj_nodes);
         }
-      cont++;
+      (*cont)++;
       free(n);
     }
   return NULL;

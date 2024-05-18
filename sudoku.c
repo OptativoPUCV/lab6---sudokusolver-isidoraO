@@ -135,7 +135,7 @@ Node* DFS(Node* initial, int* cont){
     {
       Node *n = top(stack);
       pop(stack);
-      if(is_final(n))
+      if(is_final(n) == 0)
         return n;
       adj_nodes = get_adj_nodes(n);
       Node *aux = first(adj_nodes);

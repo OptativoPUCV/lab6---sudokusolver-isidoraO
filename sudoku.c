@@ -129,9 +129,9 @@ int is_final(Node* n){
 Node* DFS(Node* initial, int* cont){
   Stack *stack = createStack();
   List *adj_nodes = createList();
-  push(stack, initial);
   
-  while(top(stack) != NULL)
+  push(stack, initial);
+  while(is_empty(stack) == 0)
     {
       Node *n = top(stack);
       pop(stack);
@@ -148,7 +148,7 @@ Node* DFS(Node* initial, int* cont){
       free(n);
     }
   
-  return n;
+  return NULL;
 }
 
 /*

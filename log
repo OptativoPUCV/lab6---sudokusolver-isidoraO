@@ -1981,3 +1981,14 @@ Sat 18 May 2024 06:16:43 PM UTC:
  tests:  7|1
 total_score: 55/70
 a267160
+Sat 18 May 2024 06:17:59 PM UTC: 
+ sudoku.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:91:7: error: variable ‘is_blank’ set but not used [-Werror=unused-but-set-variable]
+   91 |   int is_blank = 0;
+      |       ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+22a61c9

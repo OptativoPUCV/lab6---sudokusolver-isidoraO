@@ -107,8 +107,7 @@ List* get_adj_nodes(Node* n)
                 break;
               }
             }
-          if(is_blank)
-            break;
+          
         }
       }
   printf("\n");

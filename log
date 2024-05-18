@@ -2103,3 +2103,17 @@ sudoku.c:100:19: error: ‘is_blank’ undeclared (first use in this function)
       |                   ^~~~~~~~
 Compilation failed
 f62d1de
+Sat 18 May 2024 09:56:35 PM UTC: 
+ sudoku.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:95:16: error: ‘new_node’ undeclared (first use in this function)
+   95 |             if(new_node->sudo[i][j] == 0)
+      |                ^~~~~~~~
+sudoku.c:95:16: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:95:34: error: ‘j’ undeclared (first use in this function)
+   95 |             if(new_node->sudo[i][j] == 0)
+      |                                  ^
+Compilation failed
+ed16138

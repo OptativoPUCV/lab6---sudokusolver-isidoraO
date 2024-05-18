@@ -102,11 +102,11 @@ List* get_adj_nodes(Node* n)
               {
                 if(nodo->sudo[k][m] == 0)
                 {
-                    nodo->sudo[k][m] = cont;    
+                    nodo->sudo[k][m] = cont;   
+                    if(cont == 9)  
+                      return list;
                     break;
                 }
-                if(cont == 9)  
-                  return list;
               }
               break;
             }

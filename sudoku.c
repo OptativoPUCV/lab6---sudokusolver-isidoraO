@@ -135,6 +135,7 @@ Node* DFS(Node* initial, int* cont){
       while(aux != NULL)
         {
           push(stack, aux);
+          print_node(aux);
           aux = next(adj_nodes);
         }
       (*cont)++;

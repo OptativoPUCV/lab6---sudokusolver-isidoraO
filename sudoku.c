@@ -94,9 +94,10 @@ List* get_adj_nodes(Node* n)
       {
         for(int i = 0; i < 9; i++)
         {
-          printf("%i ", i);
+          printf("i:%i ", i);
           for(int j = 0; j < 9 ; j++)
             {
+              printf("j:%i", j);
               if(n->sudo[i][j] == 0)
               {
                 Node* new_node = copy(n);
@@ -107,7 +108,7 @@ List* get_adj_nodes(Node* n)
                 break;
               }
             }
-          if(is_blank && i < 9)
+          if(is_blank)
             break;
         }
       }

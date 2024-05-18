@@ -111,6 +111,7 @@ List* get_adj_nodes(Node* n)
             break;
         }
       }
+  printf("\n");
   return list;
 }
 

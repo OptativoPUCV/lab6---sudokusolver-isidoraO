@@ -101,7 +101,7 @@ List* get_adj_nodes(Node* n)
               {
                 Node* new_node = copy(n);
                 new_node->sudo[i][j] = cont;
-                is_blank = 1;
+                //is_blank = 1;
                 if(is_valid(new_node))
                   pushBack(list, new_node);
                 break;

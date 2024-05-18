@@ -2003,3 +2003,8 @@ sudoku.c:104:17: error: ‘is_blank’ undeclared (first use in this function)
 sudoku.c:104:17: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 ad89674
+Sat 18 May 2024 06:18:10 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|2
+0 1 2 3 4 5 6 7 8 0 1 2 3 4 5 6 7 8 0 1 2 3 4 5 6 7 8 0 1 2 3 4 5 6 7 8 0 1 2 3 4 5 6 7 8 0 1 2 3 4 5 6 7 8 0 1 2 3 4 5 6 7 8 0 1 2 3 4 5 6 7 8 0 1 2 3 4 5 6 d58c3c8

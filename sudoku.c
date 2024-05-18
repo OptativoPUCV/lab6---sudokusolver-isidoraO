@@ -108,7 +108,7 @@ List* get_adj_nodes(Node* n)
                 if(cont == 9)  
                   return list;
               }
-              break;
+              //break;
             }
           cont++;
           if(nodo != NULL && is_valid(nodo) == 1)

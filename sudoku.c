@@ -105,14 +105,14 @@ List* get_adj_nodes(Node* n)
                     nodo->sudo[k][m] = cont;    
                     break;
                 }
-                if(cont >= 9)  
+                if(cont == 9)  
                   return list;
               }
               break;
             }
+          cont++;
           if(nodo != NULL && is_valid(nodo) == 1)
             pushBack(list, nodo);
-          cont++;
           break;
         }
       }

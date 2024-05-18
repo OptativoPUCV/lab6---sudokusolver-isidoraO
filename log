@@ -1992,3 +1992,14 @@ sudoku.c:91:7: error: variable ‘is_blank’ set but not used [-Werror=unused-b
 cc1: all warnings being treated as errors
 Compilation failed
 22a61c9
+Sat 18 May 2024 06:18:04 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:104:17: error: ‘is_blank’ undeclared (first use in this function)
+  104 |                 is_blank = 1;
+      |                 ^~~~~~~~
+sudoku.c:104:17: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+ad89674

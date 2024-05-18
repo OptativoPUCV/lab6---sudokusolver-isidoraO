@@ -88,7 +88,7 @@ int is_valid(Node* n){
 List* get_adj_nodes(Node* n)
 {
   List* list = createList();
-  int is_blank = 0;
+  //int is_blank = 0;
   
   for(int cont = 1; cont < 10; cont++)
       {

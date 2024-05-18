@@ -103,7 +103,7 @@ List* get_adj_nodes(Node* n)
                 if(nodo->sudo[k][m] == 0)
                 {
                     nodo->sudo[k][m] = cont;   
-
+                  cont++;
                     break;
                 }
                 if(cont >= 9)  
@@ -113,7 +113,7 @@ List* get_adj_nodes(Node* n)
             }
           if(nodo != NULL && is_valid(nodo) == 1)
             pushBack(list, nodo);
-          cont++;
+
           break;
         }
       }

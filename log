@@ -1796,3 +1796,18 @@ Sat 18 May 2024 02:02:11 AM UTC:
  tests:  7|1
 total_score: 55/70
 8422032
+Sat 18 May 2024 02:04:18 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:151:10: error: ‘n’ undeclared (first use in this function)
+  151 |   return n;
+      |          ^
+sudoku.c:151:10: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:152:1: error: control reaches end of non-void function [-Werror=return-type]
+  152 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+cdf2426

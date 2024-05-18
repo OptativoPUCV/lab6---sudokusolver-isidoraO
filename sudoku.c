@@ -89,14 +89,14 @@ List* get_adj_nodes(Node* n)
 {
   List* list = createList();
   int cont = 1;
-  for(int i=0;i<9;i++)
-    for(int j=0;j<9;j++)
+  for(int i = 0; i < 9; i++)
+    for(int j = 0; j < 9; j++)
       {
         if(n->sudo[i][j] == 0)
         {
           Node *nodo = copy(n);
 
-          for(int k = 0;k < 9;k++)
+          for(int k = 0; k < 9; k++)
             {
               for(int m = 0; m < 9; m++)
               {
@@ -105,7 +105,7 @@ List* get_adj_nodes(Node* n)
                     nodo->sudo[k][m] = cont;    
                     break;
                 }
-                if(cont == 9)  
+                if(cont >= 9)  
                   return list;
               }
               break;

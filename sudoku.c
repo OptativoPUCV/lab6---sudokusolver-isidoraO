@@ -88,16 +88,15 @@ int is_valid(Node* n){
 List* get_adj_nodes(Node* n)
 {
   List* list = createList();
-  int is_blank = 0, i = 0;
+  int is_blank = 0;
   
   for(int cont = 1; cont < 10; cont++)
       {
-        while(i < 9)
+        for(int i = 0; i < 9; i++)
         {
-          printf("i:%i ", i);
+          printf("%i ", i);
           for(int j = 0; j < 9 ; j++)
             {
-              printf("j:%i", j);
               if(n->sudo[i][j] == 0)
               {
                 Node* new_node = copy(n);
@@ -108,9 +107,12 @@ List* get_adj_nodes(Node* n)
                 break;
               }
             }
-          i++;
-          if(is_blank == 0)
-            i++;
+          if(is_blank)
+          {
+            is_blank = 0;
+            break;
+          }
+
         }
       }
   printf("\n");

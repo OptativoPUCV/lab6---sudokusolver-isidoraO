@@ -112,9 +112,9 @@ List* get_adj_nodes(Node* n)
           if(nodo != NULL && is_valid(nodo) == 1)
             pushBack(list, nodo);
           cont++;
-          break;
           }
         }
+        break;
       }
   return list;
 }

@@ -96,8 +96,8 @@ List* get_adj_nodes(Node* n)
         {
           Node *nodo = copy(n);
 
-          for(int k=0;k<9;k++)
-            {for(int m = 0; m < 9; m++)
+          for(int k = 0;k < 9;k++)
+              for(int m = 0; m < 9; m++)
               {
                 if(nodo->sudo[k][m] == 0)
                 {
@@ -108,12 +108,12 @@ List* get_adj_nodes(Node* n)
                   return list;
               }
               break;
-            }
           if(nodo != NULL && is_valid(nodo) == 1)
             pushBack(list, nodo);
           cont++;
           break;
         }
+        break;
       }
   return list;
 }

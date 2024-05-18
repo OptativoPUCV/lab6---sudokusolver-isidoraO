@@ -107,7 +107,7 @@ List* get_adj_nodes(Node* n)
                 break;
               }
             }
-          if(is_blank)
+          if(is_blank && i < 9)
             break;
         }
       }

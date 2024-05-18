@@ -140,7 +140,11 @@ Node* DFS(Node* initial, int* cont){
       adj_nodes = get_adj_nodes(n);
       Node *aux = first(adj_nodes);
       while(aux != NULL)
-        push(stack, aux);
+        {
+          push(stack, aux);
+          aux = next(adj_nodes);
+        }
+
       free(n);
     }
   

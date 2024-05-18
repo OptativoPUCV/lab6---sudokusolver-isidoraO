@@ -91,12 +91,9 @@ List* get_adj_nodes(Node* n)
   int is_blank = 0;
   
   for(int cont = 1; cont < 10; cont++)
-      {
         for(int i = 0; i < 9; i++)
         {
-          printf("%i ", i);
           for(int j = 0; j < 9 ; j++)
-            {
               if(n->sudo[i][j] == 0)
               {
                 Node* new_node = copy(n);
@@ -106,16 +103,12 @@ List* get_adj_nodes(Node* n)
                   pushBack(list, new_node);
                 break;
               }
-            }
           if(is_blank)
           {
             is_blank = 0;
             break;
           }
-
         }
-      }
-  printf("\n");
   return list;
 }
 
@@ -143,19 +136,11 @@ Node* DFS(Node* initial, int* cont){
       while(aux != NULL)
         {
           push(stack, aux);
-          for(int i = 0; i < 9; i++)
-            {
-              for(int j = 0; j < 9; j++)
-              printf("%i ", aux->sudo[i][j]);
-            printf("\n");
-            }
-          printf("\n");
           aux = next(adj_nodes);
         }
       cont++;
       free(n);
     }
-  
   return NULL;
 }
 

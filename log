@@ -2117,3 +2117,17 @@ sudoku.c:95:34: error: ‘j’ undeclared (first use in this function)
       |                                  ^
 Compilation failed
 ed16138
+Sat 18 May 2024 09:57:24 PM UTC: 
+ sudoku.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+test.c: In function ‘get_adj_nodes’:
+sudoku.c:99:40: error: iteration 9 invokes undefined behavior [-Werror=aggressive-loop-optimizations]
+   99 |                   new_node->sudo[i][j] = cont;
+      |                   ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+sudoku.c:96:35: note: within this loop
+   96 |               for(int cont = 1; j < 10 ; j++)
+      |                                 ~~^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+690147a

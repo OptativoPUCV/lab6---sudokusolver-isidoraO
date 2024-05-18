@@ -90,9 +90,9 @@ List* get_adj_nodes(Node* n)
   List* list = createList();
   
    for(int i = 0; i < 9; i++)
-          for(int i = 0; i < 9; i++)
+          for(int j = 0; j < 9; j++)
           {
-            if(new_node->sudo[i][j] == 0)
+            if(n->sudo[i][j] == 0)
               for(int cont = 1; j < 10 ; j++)
                 {
                   Node* new_node = copy(n);
@@ -100,6 +100,7 @@ List* get_adj_nodes(Node* n)
                   if(is_valid(new_node))
                     pushBack(list, new_node);
                 }
+            return list;
           }
     return list;
   }
